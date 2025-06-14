@@ -9,8 +9,10 @@ function bg() {
   const nLines = 15;
   
   background(0);
-  stroke('#fff');
-  strokeWeight(0.01);
+  const c = color('#fff');
+  c.setAlpha(4);
+  stroke(c);
+  strokeWeight(1.5);
   for (var x = 0; x < width; x += width / nLines) {
     for (var y = 0; y < height; y += height / nLines) {
       line(x, 0, x, height);

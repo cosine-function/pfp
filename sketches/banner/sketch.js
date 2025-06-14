@@ -6,13 +6,15 @@ function setup() {
 
 function bg() {
   background(0);
-  stroke('#fff');
+  const c = color('#fff');
+  c.setAlpha(2);
+  stroke(c);
 
   for (var x = 0; x < width; x += width / 45) {
     for (var y = 0; y < height; y += height / 15) {
-      strokeWeight(0.01);
+      strokeWeight(2);
       line(x, 0, x, height);
-      strokeWeight(0.005);
+      strokeWeight(1);
       line(0, y, width, y);
     }
   }
